@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Javascript - Muhammad Ammar Abdurrahman</title>
+    <script>
+        function PENJUMLAHAN(){
+            let x = Number(document.getElementById("BILANGAN1").value);
+            let y = Number(document.getElementById("BILANGAN2").value);
+            let z = x + y;
+            document.getElementById("BILANGAN3"). value=z;
+        }
+        function PENGURANGAN(){
+            let x = Number(document.getElementById("BILANGAN 4").value);
+            let y = Number(document.getElementById("BILANGAN5").value);
+            let z = x - y;
+            document.getElementById("BILANGAN6"). value=z;
+            }
+    </script>
+</head>
+<body>
+    <legend>PENJUMLAHAN & PENGURANGAN </legend>
+    <form id="FORM1">
+        <input type="text" id="BILANGAN1" value="" onchange="PENJUMLAHAN()"/>
+        <b>+</b> <input type="text" id="BILANGAN2" value="" onchange="PENJUMLAHAN()"/>
+        <b>=</b> <input type="text" id="BILANGAN3" value=""/>
+    </form>
+    <form id="FORM2">
+        <input type="text" id="BILANGAN4" value="" onchange="PENGURANGAN()"/>
+        <b>-</b> <input type="text" id="BILANGAN5" value="" onchange="PENGURANGAN()"/>
+        <b>=</b> <input type="text" id="BILANGAN6" value=""/>
+    </form>
+</body>
+</html>

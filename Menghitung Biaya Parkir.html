@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript - Muhammad Ammar Abdurrahman</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>MENGHITUNG BIAYA PARKIR</legend>
+        <table>
+            <tr>
+                <th>JAM MASUK</th>
+                <th>JAM KELUAR</th>
+                <th>LAMA</th>
+                <th>KELUARAN BIAYA</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="ONE" ></td>
+                <td> <input type="text" id="TWO" onchange="parkingFee()"></td>
+                <td><input type="text" id="THREE"></td>
+                <td><input type="text"  id="FOUR"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        function parkingFee(){
+            let ENTER = Number(document.getElementById("ONE").value);
+            let OUT = Number(document.getElementById("TWO").value);
+            let DURATION = OUT - ENTER
+            let PRICE = 3000
+            document.getElementById("THREE").value= DURATION +" jam ";
+
+            if(DURATION == 2){
+                let first_two_hours = PRICE
+                document.getElementById("empat").value="Rp. " +first_two_hours ;
+            }else if(DURATION >= 2){
+                let next_hour = (DURATION - 2)*1000+PRICE
+                document.getElementById("empat").value="Rp. " +next_hour ;
+            }else{
+                document.getElementById("empat").value= 0;
+            }
+            }
+    </script>
+</body>
+</html>

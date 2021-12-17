@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Javascript - Muhammad Ammar Abdurrahman</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>MENGHITUNG LUAS DAN LINGKARAN</legend>
+        <table>
+            <tr>
+                <th>JARI-JARI LINGKARAN</th>
+                <th>LUAS LINGKARAN</th>
+                <th>KELILING LINGKARAN</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="JARI-JARI" onchange="hitung()"></td>
+                <td><input type="text" id="LUAS LINGKARAN"> </td>
+                <td><input type="text" id="KELILING"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+       function hitung(){
+           let r = Number(document.getElementById("JARI-JARI").value);
+           let phi = 22/7
+           let luas = phi*r*r
+           let keliling = 2*phi*r
+           document.getElementById("LUAS LINGKARAN").value= luas;
+           document.getElementById("KELILING").value= keliling;
+       }
+    </script>
+</body>
+</html>

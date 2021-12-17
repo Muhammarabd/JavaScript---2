@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Javascript - Muhammad Ammar Abdurrahman</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>MENGHITUNG KURS RUPIAH</legend>
+        <table>
+            <tr>
+                <th>NILAI</th>
+                <th>MATA UANG</th>
+                <th>HASIL</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="NILAI" onchange="kurs()"></td>
+                <td><input type="text" id="JENIS MATA UANG" placeholder="sadas" value="DOLLAR US"></td>
+                <td><input type="text" id="HASIL"></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+<script>
+    function kurs(){
+        if(jenis.value == "DOLLAR US"){
+            let input = Number(document.getElementById("NILAI").value);
+            let hitung = input * 14950;
+            document.getElementById("HASIL").value = "Rp. " +hitung
+        }
+    }
+</script>
+</html>
